@@ -1,4 +1,6 @@
 <template>
+<div>
+  <div class="background"></div>
     <div id="main">
       <h2>{{msg1}}</h2>
       <h3>{{msg2}}</h3>
@@ -15,7 +17,7 @@
               </div>
              <div class="btn">
                <button>
-                 <router-link to="">学习嵌入式</router-link>
+                 <router-link to="/direction/flush">学习嵌入式</router-link>
                </button>
              </div>
             </div>
@@ -31,7 +33,7 @@
               </div>
               <div class="btn">
                <button>
-                 <router-link to="">学习Web 后端</router-link>
+                 <router-link to="/direction/back">学习Web 后端</router-link>
                </button>
              </div>
             </div>
@@ -47,7 +49,7 @@
               </div>
               <div class="btn">
                <button>
-                 <router-link to="">学习Android</router-link>
+                 <router-link to="/direction/Android">学习Android</router-link>
                </button>
              </div>
             </div>
@@ -64,7 +66,7 @@
               </div>
               <div class="btn">
                <button>
-                 <router-link to="">学习Web前端</router-link>
+                 <router-link to="/direction/front">学习Web前端</router-link>
                </button>
              </div>
             </div>
@@ -72,6 +74,7 @@
         </ul>
       </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -88,8 +91,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.background{
+    width:100%;  
+    height:100%;  /**宽高100%是为了图片铺满屏幕 */
+    z-index:-1;
+    position: absolute;
+    background-color:lightblue;
+    left: 0;
+    top:0;
+}
 #main{
-  width: 100%;height:100%;padding-top: 2%;
+		width: 100%;
+		height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    
+  
 }
 h3,h2{text-align: center;}
 ul{margin: 0;padding: 0;}
