@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import main from '@/components/main'
 import direction from '@/components/direction'
+import match from '@/components/match'
 import $ from 'jquery' 
 //import 'bootstrap/dist/css/bootstrap.min.css'
 //import 'bootstrap/dist/js/bootstrap.min'
@@ -20,6 +21,12 @@ export default new Router({
 
       name: 'direction',
       component: direction
+    },
+    {
+      path: '/match',
+
+      name: 'match',
+      component: match
     }
   ]
 })
