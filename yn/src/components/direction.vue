@@ -1,6 +1,7 @@
 <template>
     <div id="main" ref="main">
-     <h1>{{top}}</h1>
+      <div class="nav" ref="nav">{{top}}</div>
+     <h1 ref="h">{{top}}</h1>
       <h2>{{logo}}</h2>
       <div id="text">
       <span id="intro"></span><span id="timer">|</span>
@@ -27,6 +28,17 @@
       </li>
     </ul>
     </div>
+    </div>
+    <div class="container">
+        <p class="text-center">
+            &copy; 2018
+            <a href="/">翼灵物联工作室</a>
+            <a href="https://github.com/YiLing-IOT-Studio">
+                <img alt="github" class="git-img" src="../assets/img/github.jpg" />
+            </a>
+
+            <a href="http://www.miitbeian.gov.cn">蜀ICP备18039687号</a>
+        </p>
     </div>
     </div>
 </template>
@@ -76,36 +88,51 @@ export default {
           if(this.$route.params.id=='flush')
           {
             this.msgm=msg1;
+            this.$refs.main.style.height ="255em"	
             
           }
           else if(this.$route.params.id=='back')
           {
             this.msgm=msg2;
+            this.$refs.main.style.height ="277em"	
           }
           else if(this.$route.params.id=='android')
           {
             this.msgm=msg3;
+            this.$refs.main.style.height ="228em"	
           }
           else if(this.$route.params.id=='front')
           {
             this.msgm=msg4;
+            this.$refs.main.style.height ="307em"	
           }
           this.top=this.msgm.top;
           this.logo=this.msgm.logo;
           this.member=this.msgm.member;
           this.showIntro=this.msgm.showIntro;
+        },
+        getScroll(){
+          if( window.pageYOffset==0)
+          this.$refs.nav.style.display ="none"	
+          if( window.pageYOffset>	this.$refs.h.offsetHeight)
+          {
+              this.$refs.nav.style.display ="block"	
+              
         }
-      },
+        
+      }
+  },
       mounted() {
         
         this.json()
         this.show()
+        window.addEventListener('scroll', this.getScroll);
        }
         }
       
 </script>
 <style scoped>
-#main{width: 100%;margin:0;height: 250em;
+#main{width: 100%;margin:0;height: 270em;
 position: absolute;
 left: 0;
 top:0;
@@ -150,5 +177,8 @@ height: 13em;margin-right: 3em;width: 12em;}
 li{margin-bottom: 7.7em;}
 p{font-size: 0.8em;}
 .name{font-size: 1.5em;}
-
+.nav{width: 100%;height: 3em;background-color:rgb(55, 138, 194);display: none;position: fixed;top:0;
+padding-bottom: 0;line-height: 3em;height: 3em;font-size: 1.2em;}
+.container{width: 100%;background-color:darkseagreen;position: absolute;bottom: 0;}
+.git-img{width: 1em;}
 </style>

@@ -49,7 +49,7 @@
               </div>
               <div class="btn">
                <button>
-                 <router-link to="/direction/Android">学习Android</router-link>
+                 <router-link to="/direction/android">学习Android</router-link>
                </button>
              </div>
             </div>
