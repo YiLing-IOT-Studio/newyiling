@@ -179,6 +179,10 @@ p{font-size: 0.8em;}
 .name{font-size: 1.5em;}
 .nav{width: 100%;height: 3em;background-color:rgb(55, 138, 194);display: none;position: fixed;top:0;
 padding-bottom: 0;line-height: 3em;height: 3em;font-size: 1.2em;}
-.container{width: 100%;background-color:darkseagreen;position: absolute;bottom: 0;}
+.container{width: 100%;position: absolute;bottom: 0;}
 .git-img{width: 1em;}
+.container a{text-decoration-line: none;}
+.container p a:link{color: powderblue;}
+.container p a:visited{color: powderblue;}
+.container p a:hover{color: powderblue;}
 </style>

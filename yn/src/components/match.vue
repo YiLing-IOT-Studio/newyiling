@@ -3,10 +3,10 @@
         <div class="nav">物联网创意大赛</div>
         <div>
             <ul>
-                <a class="logo" href="">大赛资料</a>
-                <a class="logo"  href="">风采展示</a>
+                <a class="logo" href="#intro">大赛资料</a>
+                <a class="logo"  href="#show">风采展示</a>
                 
-                <a class="logo"  href="">报名参赛</a>
+                <a class="logo"  href="#match">报名参赛</a>
         
             </ul>
 </div>
@@ -29,7 +29,7 @@
                     <p class="mouse-text">了解有关物联网创意大赛的更多内容</p>
                     <img class="jian" src="../assets/img/箭头 下降.png"> 
                     </div>
-                    <div class="col">
+                    <div class="col" id="intro">
                         <div class="title">
                             <h4>比赛简介</h4>
                             <div class="block"></div>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col" id="show">
                         <div class="title">
                             <h4>风采展示</h4>
                             <div class="block"></div>
@@ -141,8 +141,49 @@
                          </div>
                         </div>
                     </div>
+                     <div class="col bao" id="match">
+                        <div class="title">
+                            <h4>报名参赛</h4>
+                            <div class="block"></div>
+                        </div>
+                        <div class="shu"></div>
+                        <div class="show">
+                        <div class="load">
+                            <div>
+                            <a>
+                                <img src="../assets/img/箭头 下降.png">
+                                <span>下载参赛资料</span>
+                            </a>
+                            </div>
+                            <div>
+                            <a>
+                                <img src="../assets/img/箭头 下降.png">
+                                <span>下载报名表</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="sign">
+                            
+                            <input type="file" id="file"/>
+                        </div>
+                        <div class="submit-box">
+                            <button type="submit" v-on:click="validate">提交</button>
+                        </div>
+                        </div>
+                     </div>
+                     <div class="container">
+        <p class="text-center">
+            &copy; 2018
+            <a href="/">翼灵物联工作室</a>
+            <a href="https://github.com/YiLing-IOT-Studio">
+                <img alt="github" class="git-img" src="../assets/img/github.jpg" />
+            </a>
+
+            <a href="http://www.miitbeian.gov.cn">蜀ICP备18039687号</a>
+        </p>
+    </div>
             </div>
-             
+            
     
 </template>
 <script>
@@ -152,17 +193,31 @@ export default {
         return{
                  
         }
+    },
+    methods:{
+        validate(){
+    var file=document.getElementById("file").value;
+    if(file=="")
+    {
+        alert("请选择上传文件！");
+        return false;
+    }
+    return true;
+}
     }
 }
 </script>
-<style>
-.main{background-color:beige;position: absolute;left: 0;top: 0;height: 100em;width: 100%;}
+<style scoped>
+.main{background-color:beige;position: absolute;left: 0;top: 0;height: 145em;width: 100%;}
 .nav{background-color:darkseagreen;line-height: 3em;height: 3em;width: 100%;text-align: center;border: 1px solid cadetblue;}
 
 li{list-style: none;}
 a{text-decoration-line: none;}
 .top{width: 5em;}
+.logo:link{color:rgb(86, 180, 102)}
+.logo:visited{color:rgb(86, 180, 102) }
 .logo:hover {color: red} 
+
 .logo{margin-left: 12.5em;}
 .total{margin-top: 2em;font-size: .7em;text-align: center;}
 .dropdown-item{margin-left: 3em;}
@@ -200,5 +255,16 @@ font-size: 1em;
 .show{margin-left: 3em;}
 .show1,.show2{display:-webkit-box;  
             -webkit-box-orient:horizontal;}
-        
+.sign{border:1px solid gray;width: 45em;height: 10em;text-align: center;line-height: 10em;}
+.load img{width: 2em;position: absolute;top: .5em;left: .5em;}
+.load div{background-color:lightsteelblue;height: 3em;line-height: 3em;position: relative;padding-left: 3em;width: 8em;border-radius: 1em;
+margin-right: 3em;margin-bottom: 3em;margin-top: 3em;}
+.load{display:-webkit-box;  
+            -webkit-box-orient:horizontal;}
+.submit-box{position: absolute;bottom: 5em;right: 5em;
+}
+.submit-box button{width: 7em;height: 2em;}
+.bao{position: relative;}
+.git-img{width: 1em;}
+.container{text-align: center;margin-top: 8em;}
 </style>
