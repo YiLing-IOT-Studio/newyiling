@@ -1,0 +1,10 @@
+.header_content, .footer_content{
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+.main_content{
+  position: relative;
+}
