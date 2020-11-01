@@ -1,6 +1,24 @@
 <template>
     <div id="main" ref="main">
-      <div class="nav" ref="nav">{{top}}</div>
+      <div class="nav" ref="nav">
+        <div class="top">{{top}}</div>
+        <div id="head">
+        <ul >
+          <a class="nav-link" href="#/studyPage">翼灵官网</a>
+          <a class="nav-link" href="#/direction/flush">嵌入式</a>
+          <a class="nav-link" href="#/direction/back">Web后端</a>
+          <a class="nav-link" href="#/direction/android">安卓</a>
+        
+        </ul>
+        </div>
+        </div>
+        <ul id="a">
+          <a class="nav-link" href="#/studyPage">翼灵官网</a>
+          <a class="nav-link" href="#/direction/flush">嵌入式</a>
+          <a class="nav-link" href="#/direction/back">Web后端</a>
+          <a class="nav-link" href="#/direction/android">安卓</a>
+        
+        </ul>
      <h1 ref="h">{{top}}</h1>
       <h2>{{logo}}</h2>
       <div id="text">
@@ -13,7 +31,7 @@
             <hr />
         </div>
         <div class="wall">
-      <ul>
+      <ul id="mem">
       <li
         v-for="item of member"
     :key="item.id"
@@ -43,18 +61,14 @@
     </div>
 </template>
 <script>
-import msg1 from '../assets/flush'
-import msg2 from '../assets/back'
-import msg3 from '../assets/android'
+
 import msg4 from '../assets/front'
 export default {
   
   name: 'direction',
   data () {
     return {
-      msg1,
-      msg2,
-      msg3,
+      
       msg4,
       msgm:[],
       top:'',
@@ -85,27 +99,10 @@ export default {
         },
         json(){
           
-          if(this.$route.params.id=='flush')
-          {
-            this.msgm=msg1;
-            this.$refs.main.style.height ="255em"	
-            
-          }
-          else if(this.$route.params.id=='back')
-          {
-            this.msgm=msg2;
-            this.$refs.main.style.height ="277em"	
-          }
-          else if(this.$route.params.id=='android')
-          {
-            this.msgm=msg3;
-            this.$refs.main.style.height ="228em"	
-          }
-          else if(this.$route.params.id=='front')
-          {
+         
             this.msgm=msg4;
             this.$refs.main.style.height ="307em"	
-          }
+          
           this.top=this.msgm.top;
           this.logo=this.msgm.logo;
           this.member=this.msgm.member;
@@ -174,15 +171,24 @@ h3 {
 }
 .img{float: left;
 height: 13em;margin-right: 3em;width: 12em;}
-li{margin-bottom: 7.7em;}
+#mem li{margin-bottom: 7.7em;}
 p{font-size: 0.8em;}
 .name{font-size: 1.5em;}
 .nav{width: 100%;height: 3em;background-color:rgb(55, 138, 194);display: none;position: fixed;top:0;
 padding-bottom: 0;line-height: 3em;height: 3em;font-size: 1.2em;}
+.top{float: left;margin-left: 3rem;}
 .container{width: 100%;position: absolute;bottom: 0;}
 .git-img{width: 1em;}
 .container a{text-decoration-line: none;}
 .container p a:link{color: powderblue;}
 .container p a:visited{color: powderblue;}
 .container p a:hover{color: powderblue;}
+#head{float: right;font-size: 0.7em;}
+#head a{text-decoration-line: none;margin-right: 3em;}
+ul{padding: 0;margin: 0;}
+a{text-decoration-line: none;}
+#a a{margin-right: 3em;font-size: 0.8em;}
+#a a:link{color:rgb(86, 180, 102)}
+#a a:visited{color:rgb(86, 180, 102) }
+#a a:hover {color: red} 
 </style>

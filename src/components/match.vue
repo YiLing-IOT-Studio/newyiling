@@ -15,7 +15,7 @@
         
                     <span class="dropdown-header">翼灵物联工作室</span>
                     <a class="dropdown-item" href="">翼灵官网</a>
-                    <a class="dropdown-item" href="/studyPage">培养方向</a>
+                    <a class="dropdown-item" href="#/studyPage">培养方向</a>
                     <a class="dropdown-item" href="#">创意大赛</a>
                     <a class="dropdown-item disabled" href="">开源空间</a>
                     <a class="dropdown-item disabled" href="">招新系统</a>

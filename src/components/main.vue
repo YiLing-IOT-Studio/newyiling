@@ -113,7 +113,7 @@ h3,h2{text-align: center;}
 ul{margin: 0;padding: 0;}
 #four{width: 90%;margin:auto;margin-top: 5%;}
 li{list-style: none;float: left;width: 25%;height: 13em;}
-.item{width:90% ;height: 100%;border: 1px solid gray;margin:auto;border-radius: 3%;font-size: 13px;position: relative;}
+.item{width:90% ;height: 100%;border: 1px solid gray;margin:auto;border-radius: 3%;font-size: 0.83rem;position: relative;}
 li div img{width: 40%;margin-top: 5%;}
 .img{text-align: center;width: 100%;height: 40%;}
 .text{margin-left: 3%;margin-right: 3%;}
@@ -121,7 +121,7 @@ li div img{width: 40%;margin-top: 5%;}
 button{display: inline-block;
 height: 100%;
 width: 100%;
-font-size: 11px;
+font-size: 0.8em;
   cursor: pointer;
   text-align: center;   
   text-decoration: none;
