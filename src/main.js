@@ -18,6 +18,7 @@ window.addEventListener('resize', () => {
     htmlDom.style.fontSize = htmlWidth *16/1071+ 'px';
 }) 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

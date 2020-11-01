@@ -124,6 +124,7 @@ export default {
         this.json()
         this.show()
         window.addEventListener('scroll', this.getScroll);
+        document.documentElement.scrollTop=0;
        }
         }
       
